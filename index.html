@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitud API</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Peticion</h1>
+    <form id="misDatos" method="POST" action="https://comfenalcocursos.000webhostapp.com/Peticion_API_servidores_18_07_2022/api.php" >
+        <label>Cedula *</label>
+        <input name="cedula" type="number" required value="123">
+        <label>Nombre Completo *</label>
+        <input name="nombres" type="text" required value="Miguel">
+        <label>Apellido Completos</label>
+        <input name="apellidos" type="text">
+        <label>Email *</label>
+        <input name="email" type="email" required value="m@gail.com">
+        <input type="submit" value="Pasar Datos al PHP">
+    </form>
+
     <div id="mostrar"></div>
+    
 </body>
 </html>
