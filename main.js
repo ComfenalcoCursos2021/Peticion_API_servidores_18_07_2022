@@ -1,3 +1,4 @@
+let csrf = new Worker("generadorToken.js");
 addEventListener("DOMContentLoaded", ()=>{
     let form = document.querySelector("#misDatos");
     form.addEventListener("submit", async(e)=>{
