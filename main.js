@@ -2,11 +2,16 @@ addEventListener("DOMContentLoaded", ()=>{
     let form = document.querySelector("#misDatos");
     form.addEventListener("submit", async(e)=>{
         e.preventDefault();
-        let json = {};
-        let input = Array.from(e.target);
-        input.pop();
-        input.forEach(res=>{json[res.name] = res.value;});
-    
+        let checkboxInput = document.querySelectorAll("input[type='checkbox']");
+        let checkboxNames = [];
+        checkboxInput.forEach(res => checkboxNames.push(res.name));
+        checkboxInput = new Set(checkboxNames);
+        checkboxNames = [... checkboxInput];
+        let input = new FormData(e.target);
+        let json = Object.fromEntries(input.entries());
+        checkboxNames.forEach(res => json[res] = input.getAll(res));
+       
+        
 
 
 

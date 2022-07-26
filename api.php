@@ -4,6 +4,6 @@
     $_DATA = file_get_contents("php://input");
     $_DATA = json_decode($_DATA, true);
     print_r($_DATA);
-    print_r(apache_request_headers());
+    // print_r(apache_request_headers());
 
 ?>

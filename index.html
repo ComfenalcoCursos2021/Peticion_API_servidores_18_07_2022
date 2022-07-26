@@ -9,7 +9,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form id="misDatos" method="POST" action="https://comfenalcocursos.000webhostapp.com/Peticion_API_servidores_18_07_2022/api.php" >
+    <form id="misDatos" method="POST" action="api.php" data-csrf="" >
         <label>Cedula *</label>
         <input name="cedula" type="number" required value="123">
         <label>Nombre Completo *</label>
@@ -18,8 +18,18 @@
         <input name="apellidos" type="text">
         <label>Email *</label>
         <input name="email" type="email" required value="m@gail.com">
+        <label >Actividades de interes</label>
+        <input name="pasaTiempos" type="checkbox" value="COCINAR">Cocinar
+        <input name="pasaTiempos" type="checkbox" value="PROGRAMAR">Programar
+        <input name="pasaTiempos" type="checkbox" value="LEER">Leer
+        <input name="pasaTiempos" type="checkbox" value="VER NETFLIX">Ver Netflix
+        <label >Veiculos Propios</label>
+        <input name="veiculos" type="checkbox" value="Carro">Carro
+        <input name="veiculos" type="checkbox" value="Moto">Moto
+        <input name="veiculos" type="checkbox" value="Bicicleta">Bicicleta
         <input type="submit" value="Pasar Datos al PHP">
     </form>
+    
 
     <div id="mostrar"></div>
     
