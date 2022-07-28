@@ -5,3 +5,14 @@ input[type="submit"]{
 input[type="submit"]{
     margin-top: 10px;
 }
+pre{
+    background: #121212;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+pre::selection{
+    background: #4343437f;
+    color: #fff;
+}
